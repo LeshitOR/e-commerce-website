@@ -14,7 +14,7 @@ const products = [
           img: "./img/air.png",
         },
         {
-          code: "darkblue",
+          code: "blueviolet",
           img: "./img/air2.png",
         },
       ],
@@ -29,7 +29,7 @@ const products = [
           img: "./img/jordan.png",
         },
         {
-          code: "green",
+          code: "black",
           img: "./img/jordan2.png",
         },
       ],
@@ -120,7 +120,7 @@ currentProductColors.forEach((item,index)=>{
     
 });
 
-// change the size color
+// change the size colorx
 currentProductSizes.forEach((size, index)=>{
     size.addEventListener("click", ()=>{
         currentProductSizes.forEach((size)=>{
@@ -130,4 +130,18 @@ currentProductSizes.forEach((size, index)=>{
         size.style.backgroundColor = "black";
         size.style.color = "white";
     })
+})
+
+
+
+const productButton = document.querySelector(".productButton");
+const payment = document.querySelector(".payment");
+const close = document.querySelector(".close");
+
+
+productButton.addEventListener("click", () => {
+    payment.style.display = "flex";
+})
+close.addEventListener("click", () => {
+    payment.style.display = "none";
 })
